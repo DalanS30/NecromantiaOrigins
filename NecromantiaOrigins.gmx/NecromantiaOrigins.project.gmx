@@ -8,6 +8,21 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Story">
+      <script>scripts\s0.gml</script>
+    </scripts>
+    <script>scripts\FormatString.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\Default</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\mainTextBox</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\mainTextWindow</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
