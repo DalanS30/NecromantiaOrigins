@@ -5,23 +5,36 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr32</sprite>
+    <sprite>sprites\sprButton</sprite>
+    <sprite>sprites\sprClock</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Story">
-      <script>scripts\s0.gml</script>
+    <script>scripts\scrFormatString.gml</script>
+    <scripts name="storyScripts">
+      <script>scripts\_Start.gml</script>
+      <script>scripts\_Button.gml</script>
     </scripts>
-    <script>scripts\FormatString.gml</script>
+    <script>scripts\addItem.gml</script>
+    <script>scripts\hasItem.gml</script>
+    <script>scripts\removeItem.gml</script>
+    <script>scripts\autoButton.gml</script>
+    <script>scripts\invString.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\Default</font>
+    <font>fonts\fntNormal</font>
+    <font>fonts\fntSmall</font>
   </fonts>
   <objects name="objects">
-    <object>objects\mainTextBox</object>
+    <object>objects\objTextbox</object>
+    <object>objects\objButton</object>
+    <object>objects\objClock</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\mainTextWindow</room>
+    <room>rooms\romIngame</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

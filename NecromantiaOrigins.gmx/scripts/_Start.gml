@@ -8,6 +8,21 @@ s = argument0
 time -= utime
 utime = 0
 
+if hasItem("note: 'D'") && hasItem("note: 'R'") && hasItem("note: 'E'") && hasItem("note: 'A'") && hasItem("note: 'M'") 
+{
+    if time <= 0
+        time = 1
+        
+    s = 21
+}
+
+if time <= 0
+{
+    time = 60
+    _Start(9)
+    return 0;
+}
+
 switch s
 {
 
@@ -65,6 +80,11 @@ case 2: //patricks room
     text = "Pat greets you shortly, but doesn't even look up. He seems to be lost in some important project. You ask him: "+chr(34)+"Wanna head to the cafeteria early?"+chr(34)+". He just answers: "+chr(34)+"No, thanks."+'"'+"."
     utime += 4
     
+    if hasItem("soiled cookie")
+        numberOfButtons = 3
+    else
+        numberOfButtons = 2
+    
     btime[0] = 5
     btime[1] = 1
     btime[2] = 4
@@ -114,6 +134,14 @@ case 4: //pat-room examination
 break
 
 case 5: //cafeteria
+    if hasItem("hot coffee")
+    {
+        text = "As you enter the cafeteria again, you take a look through the window at the cold outside. You have a fantastic idea: You take a small ice cone from outside and put it into your hot coffee. You drink the cooled down coffee in one big gulp. At the bottom of your coffee you surprisingly find another blue piece of paper. It has the letter 'M' written on it. "
+        removeItem("hot coffee")
+        addItem("note: 'M'")
+        utime += 20
+    }
+    else
     if alt
     {
         text = "You are back in the cafeteria. "
@@ -125,6 +153,12 @@ case 5: //cafeteria
     else
     if playthrough > 1
         text = "The cafeteria. Still no cookies. "
+        
+    if hasItem("cookie") || hasItem("soiled cookie")
+        nuberOfButtons = 2
+    else
+        numberOfButtons = 3
+    utime += 1
     
     btime[0] = 6
     btime[1] = 4
@@ -157,6 +191,7 @@ break
 
 case 7: //plant
     text = "You find a small cute caterpillar on one of the leaves. You decide to keep it."
+    addItem("caterpillar")
     utime += 20
     
     if !noticeBoardExamined
@@ -175,6 +210,7 @@ break
 
 case 8: //notice board free
     text = "Now that you take a closer look at the notice board, you see that there is a suspicious blue note. It shows the letter 'D'. Weird."
+    addItem("note: 'D'")
     utime += 5
     
     if plantExamined
@@ -202,6 +238,11 @@ case 11: // toilets
     }
     utime += 2
     
+    if hasItem("note: 'R'")
+        numberOfButtons = 2
+    else
+        numberOfButtons = 3
+    
     btime[0] = 6
     btime[1] = 3
     btime[2] = 2
@@ -214,6 +255,7 @@ break
 case 12: //kitchen
     text = "You walk around in the kitchen a bit until an cafeteria employee shouts at you: "+'"'+"You are not supposed to walk around in here. Lunch will be in a few minutes."+'"'+" On your way out you manage to steal a cookie. "
     utime += 8   
+    addItem("cookie")
     kitchenVisited = true
     
     btime[0] = 2
@@ -226,6 +268,11 @@ break
 case 13: //toilet
     text = "The horrible smell comes from this soiled toilet. It is disgusting."
     utime += 4
+    if hasItem("cookie")
+        numberOfButtons = 2
+    else
+        numberOfButtons = 1
+        
     btime[0] = 3
     btime[1] = 2
     button[0].text = "Leave. "
@@ -234,6 +281,7 @@ break
 
 case 14: //trash can
     text = "You take a look in the trash can. There is a blue piece of paper. It kind of looks like the other one. You decide to take it. The letter 'R' is written on it. "
+    addItem("note: 'R'")
     utime += 3
     numberOfButtons = 1    
     btime[0] = 2
@@ -245,6 +293,8 @@ break
 case 15: //dip :)
     text = "You slowly dip the cookie into the not-so-clean toilet water. "
     utime += 10
+    removeItem("cookie")
+    addItem("soiled cookie")
     
     numberOfButtons = 1
     btime[0] = 2
@@ -254,7 +304,8 @@ break
 
 case 16: //fuse box
     text = "For whatever reason you decide to open the fuse box. Inside it you find another blue note. It has the letter 'E' written on it. "
-    utime += 10  
+    utime += 10
+    addItem("note: 'E'")    
     numberOfButtons = 1
     
     button[0].text = "Head to the cafeteria. "
@@ -263,6 +314,7 @@ break
 case 17: //Pat cookie bad stuff
     text = "Pat takes the cookie. "+'"'+"Thanks, man!"+'"'+", he says. He bites into the cookie and has this strange expression on his face. "+'"'+"What the fuck?"+'"'+", he screams and runs out of the room. It seems like he's running off to the toilet. Poor guy."
     utime += 15
+    removeItem("soiled cookie")
     patInHisRoom = false
     noticeBoardExamined = false
     
@@ -278,7 +330,12 @@ break
 
 case 18: //coffee machine
     text = "You could at least get a cup of coffee. There are also apples in a basket next to the coffee machine."
-    utime += 1  
+    utime += 1
+    
+    if hasItem("caterpillar")
+        numberOfButtons = 3
+    else
+        numberOfButtons = 2    
         
     btime[0] = 4
     btime[1] = 2
@@ -292,8 +349,23 @@ case 18: //coffee machine
 break
 
 case 19: //coffee logic
+    if hasItem("hot coffee")
+    {
+        text = "You still have coffee. It is still hot. What are you doing here?"
+        utime += 3
+    }
+    else
+    if hasItem("note: 'M'")
+    {
+        text = "You don't think you want another coffee. "
+        utime += 3    
+    }
+    else
+    {
         text = "You get yourself a coffee from the machine. "+'"'+"Ouch, that's hot!"+'"'+", you scream as you take a nip. You will have to wait until it cools down."
         utime += 18
+        addItem("hot coffee")
+    }
     numberOfButtons = 1    
     btime[0] = 4    
     button[0].text = "Return to the cafeteria. "
@@ -302,6 +374,8 @@ break
 case 20: //caterpillar magic
     text = "Your caterpillar must be very hungry. You give it an apple and it surprisingly starts to eat. It eats, and eats, and eats. It eats the whole apple and as soon as it has finished eating it turns into a big blue butterfly made out of thin blue paper. You unfold the note. It has the letter 'A' written on it. "
     utime += 20
+    removeItem("caterpillar")
+    addItem("note: 'A'")
     
     numberOfButtons = 1
     
@@ -323,7 +397,9 @@ default: text = "room not written, yet. Sorry :("
 
 state = argument0
 
-text = FormatString(text, text_width) 
+text = scrFormatString(text, text_width) 
+if ds_list_size(items)>0
+    text += "#" + scrFormatString("(Inventory: " + invString() + ")", text_width)
 
 for(i = 0; i < 4; i++)
 {
