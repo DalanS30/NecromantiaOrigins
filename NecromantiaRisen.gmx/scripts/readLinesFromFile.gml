@@ -1,8 +1,8 @@
 var fileName = argument0;
 var returnString;
-var textFile = file_text_open_read(global.gameName + "\" + fileName);
+var textFile = file_text_open_read(fileName);
 var n = 1;
-global.fileName = fileName;
+global.numberOfButtons = 0;
 
 do {
     read[n] = file_text_read_string(textFile);
@@ -12,9 +12,17 @@ do {
 
 file_text_close(textFile);
 returnString = "";
+var tempString = "";
 
 for(i = 1; i < n; i += 1;) {
-    returnString += string(read[i])+"#";
+    tempString = string(read[i]);
+    if ("|" == string_char_at(tempString, 2)) {
+        returnString = returnString + string_delete(tempString, 1, 2) + "#";
+        global.numberOfButtons++;
+    }
+    else {
+        returnString += tempString + "#";
+    }
 }
 
 show_debug_message(returnString)
