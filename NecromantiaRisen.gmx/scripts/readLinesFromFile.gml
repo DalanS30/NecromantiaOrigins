@@ -1,8 +1,8 @@
 var fileName = argument0;
 var returnString;
-
-textFile = file_text_open_read(fileName);
-n = 1;
+var textFile = file_text_open_read(global.gameName + "\" + fileName);
+var n = 1;
+global.fileName = fileName;
 
 do {
     read[n] = file_text_read_string(textFile);

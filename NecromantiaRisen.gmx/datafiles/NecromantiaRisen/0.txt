@@ -1,0 +1,6 @@
+You go out into the woods to look for dellaberries in the early evening. The breeze is cool and the sun is warm up in the sky, and they bring joy to your child's heart. As you leave your family's humble shack, your father calls out to you while he goads the family's mule into its decrepit little barn. "Be sure to return before the night comes!" he says in a stern tone -- you hear his love for you in his voice, all the same, in spite of his elder's warning.
+You call back: "I will, father!" as you dart into the woods with a small basket in hand. The smell of mother's stew issues out from your shack and hangs in the air; it always warms the stomach, but it also always tastes like tree-bark. The dellaberries that grow in the woods, however, taste so sweet and get rid of the stew's lingering aftertaste, and you look forward to having some after tonight's supper.
+Will you trek towards the glen, where the dellaberries grow by the stream, or will you head towards the nearby cave, where the sweetest berries seem to grow?
+
+1|1. Go to the glen
+2|2. Go to the cave

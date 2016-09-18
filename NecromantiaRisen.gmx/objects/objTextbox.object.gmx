@@ -45,7 +45,7 @@ utime = 0
 
 alt = false //alternative text
 
-_Start(0)
+Start()
 </string>
           </argument>
         </arguments>
@@ -71,7 +71,7 @@ _Start(0)
             <string>for(i = 0; i &lt; 4; i++)
 {
     if button[i].pressed
-        _Button(i)
+        buttonClick(i)
 }
 </string>
           </argument>
