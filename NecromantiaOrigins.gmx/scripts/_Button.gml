@@ -124,12 +124,4 @@ switch state
     default:
 }
 
-/*
-    case 1: 
-        switch b
-        {
-            case 0:  break;
-        }
-    break
-
 

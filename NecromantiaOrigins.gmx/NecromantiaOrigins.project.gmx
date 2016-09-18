@@ -3,12 +3,30 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>test.txt</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>test.txt</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr32</sprite>
     <sprite>sprites\sprButton</sprite>
-    <sprite>sprites\sprClock</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -23,6 +41,7 @@
     <script>scripts\removeItem.gml</script>
     <script>scripts\autoButton.gml</script>
     <script>scripts\invString.gml</script>
+    <script>scripts\readLinesFromFile.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fntNormal</font>
@@ -31,10 +50,9 @@
   <objects name="objects">
     <object>objects\objTextbox</object>
     <object>objects\objButton</object>
-    <object>objects\objClock</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\romIngame</room>
+    <room>rooms\mainGameRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
