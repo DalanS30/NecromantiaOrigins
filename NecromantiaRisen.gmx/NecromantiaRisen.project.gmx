@@ -153,6 +153,7 @@
     <object>objects\objButton</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\startRoom</room>
     <room>rooms\mainGameRoom</room>
   </rooms>
   <help>
