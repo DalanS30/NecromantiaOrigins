@@ -143,17 +143,19 @@
     <script>scripts\readLinesFromFile.gml</script>
     <script>scripts\loadFile.gml</script>
     <script>scripts\Start.gml</script>
+    <script>scripts\Initialize.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fntNormal</font>
     <font>fonts\fntSmall</font>
+    <font>fonts\fnt_text</font>
   </fonts>
   <objects name="objects">
-    <object>objects\objTextbox</object>
     <object>objects\objButton</object>
+    <object>objects\objTextBox</object>
+    <object>objects\old</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\startRoom</room>
     <room>rooms\mainGameRoom</room>
   </rooms>
   <help>
