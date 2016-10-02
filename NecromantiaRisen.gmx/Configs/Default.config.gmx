@@ -2,7 +2,7 @@
 <Config>
   <Options>
     <option_aborterrors>False</option_aborterrors>
-    <option_android_GPU_device>0</option_android_GPU_device>
+    <option_android_GPU_device>1</option_android_GPU_device>
     <option_android_adcolony_ads>0</option_android_adcolony_ads>
     <option_android_adcolony_enable_V4VC>false</option_android_adcolony_enable_V4VC>
     <option_android_advertising_enable>false</option_android_advertising_enable>
@@ -25,7 +25,7 @@
     <option_android_build_version>0</option_android_build_version>
     <option_android_color_depth>0</option_android_color_depth>
     <option_android_compile_sdk_version>23</option_android_compile_sdk_version>
-    <option_android_display_name>gm48_#9_1_minute_text_adventure</option_android_display_name>
+    <option_android_display_name>Necromantia Risen</option_android_display_name>
     <option_android_facebook_app_display_name></option_android_facebook_app_display_name>
     <option_android_facebook_appid></option_android_facebook_appid>
     <option_android_facebook_enable>0</option_android_facebook_enable>
@@ -40,7 +40,7 @@
     <option_android_google_play_id></option_android_google_play_id>
     <option_android_google_tracking_id></option_android_google_tracking_id>
     <option_android_iap_suppress_toast>false</option_android_iap_suppress_toast>
-    <option_android_icade_support>-1</option_android_icade_support>
+    <option_android_icade_support>0</option_android_icade_support>
     <option_android_icon_170>Configs\Default\android\icons\icon170.png</option_android_icon_170>
     <option_android_icon_36>Configs\Default\android\icons\icon36.png</option_android_icon_36>
     <option_android_icon_48>Configs\Default\android\icons\icon48.png</option_android_icon_48>
@@ -77,10 +77,10 @@
     <option_android_orient_portrait_flipped>True</option_android_orient_portrait_flipped>
     <option_android_orientation>2</option_android_orientation>
     <option_android_ouya_icon>Configs\Default\android\icons\ouyaIcon.png</option_android_ouya_icon>
-    <option_android_package_company>companyname</option_android_package_company>
+    <option_android_package_company>ReaverGames</option_android_package_company>
     <option_android_package_domain>com</option_android_package_domain>
-    <option_android_package_product>gm48_9_1_minute_text_adventure</option_android_package_product>
-    <option_android_permission_flags>8</option_android_permission_flags>
+    <option_android_package_product>NecromantiaRisen</option_android_package_product>
+    <option_android_permission_flags>0</option_android_permission_flags>
     <option_android_pocketchange_enable>false</option_android_pocketchange_enable>
     <option_android_pocketchange_id></option_android_pocketchange_id>
     <option_android_pocketchange_test_enable>false</option_android_pocketchange_test_enable>
@@ -91,8 +91,8 @@
     <option_android_set_device_id></option_android_set_device_id>
     <option_android_splash_png>Configs\Default\android\splash.png</option_android_splash_png>
     <option_android_splash_time>0</option_android_splash_time>
-    <option_android_support_lib_version>23.1.1</option_android_support_lib_version>
-    <option_android_target_sdk_version>16</option_android_target_sdk_version>
+    <option_android_support_lib_version>23.0.1</option_android_support_lib_version>
+    <option_android_target_sdk_version>23</option_android_target_sdk_version>
     <option_android_texture_page>1024</option_android_texture_page>
     <option_android_use_test_ads>false</option_android_use_test_ads>
     <option_androidfire_GPU_device>0</option_androidfire_GPU_device>

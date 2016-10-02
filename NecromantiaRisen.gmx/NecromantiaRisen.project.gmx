@@ -153,9 +153,9 @@
   <objects name="objects">
     <object>objects\objButton</object>
     <object>objects\objTextBox</object>
-    <object>objects\old</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\startRoom</room>
     <room>rooms\mainGameRoom</room>
   </rooms>
   <help>

@@ -44,8 +44,6 @@ time = 60
 utime = 0
 
 alt = false //alternative text
-
-Initialize();
 </string>
           </argument>
         </arguments>
@@ -66,8 +64,8 @@ Initialize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>area_width = 400
-area_height = 600
+            <string>area_width = global.MonitorWidth - 150; //400
+area_height = global.MonitorHeight - 400; //600
 area_x = 40
 area_y = 20
 area_surface = surface_create(area_width, area_height)
